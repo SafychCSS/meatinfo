@@ -59,14 +59,9 @@ a {
     position: relative;
     color: $main-color;
     text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 1px;
-    transition: .2s;
 
     &:hover {
-        background-size: 100% 1px;
+        text-decoration: underline;
     }
 }
 

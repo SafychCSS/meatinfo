@@ -23,6 +23,45 @@ body {
   color: #424242;
 }
 
+input, button, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  outline: 0;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #999;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #999;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: #999;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+button {
+  font-weight: 500;
+  background-color: #005FAE;
+}
+
+button:hover {
+  background-color: rgba(0, 95, 174, 0.92);
+}
+
+button:active {
+  background-color: rgba(0, 95, 174, 0.68);
+}
+
 a {
   position: relative;
   color: #005FAE;
@@ -46,7 +85,6 @@ a:hover {
 .btn {
   display: inline-block;
   padding: 13px 25px;
-  font-size: 14px;
   color: #fff;
   line-height: 1;
   border: 0;
@@ -138,5 +176,37 @@ a:hover {
 
 .breadcrumbs__link {
   color: #666666;
+}
+
+/*** search ***/
+.search {
+  max-width: 940px;
+  background: #FFFFFF;
+  border: 2px solid #005FAE;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.search__input {
+  width: 100%;
+  padding-left: 12px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border: 0;
+}
+
+.search__input:focus {
+  -webkit-box-shadow: 0 0 3px 2px #005FAE;
+          box-shadow: 0 0 3px 2px #005FAE;
+}
+
+.search__btn {
+  width: 64px;
+  height: 40px;
+  text-indent: -9999;
+  background: #005FAE url("/static/img/icon-search.svg") center no-repeat;
+  border: 0;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

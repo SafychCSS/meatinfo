@@ -31,6 +31,30 @@ body {
     color: #424242;
 }
 
+input, button, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    outline: 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+button {
+    font-weight: 500;
+    background-color: $main-color;
+
+    &:hover {
+        background-color: $btn-hover-color;
+    }
+
+    &:active {
+        background-color: $btn-active-color;
+    }
+}
+
 a {
     position: relative;
     color: $main-color;
@@ -49,7 +73,6 @@ a {
 .btn {
     display: inline-block;
     padding: 13px 25px;
-    font-size: 14px;
     color: #fff;
     line-height: 1;
     border: 0;
@@ -137,5 +160,35 @@ a {
 
     &__link {
         color: #666666;
+    }
+}
+
+/*** search ***/
+.search {
+    max-width: 940px;
+    background: #FFFFFF;
+    border: 2px solid $main-color;
+    border-radius: $border-radius;
+    box-sizing: border-box;
+
+    &__input {
+        width: 100%;
+        padding-left: 12px;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        border: 0;
+
+        &:focus {
+            box-shadow: 0 0 3px 2px #005FAE;
+        }
+    }
+
+    &__btn {
+        width: 64px;
+        height: 40px;
+        text-indent: -9999;
+        background: $main-color url('/static/img/icon-search.svg') center no-repeat;
+        border: 0;
+        cursor: pointer;
     }
 }

@@ -1,0 +1,145 @@
+$main-color: #005FAE;
+$accent-color: #00C346;
+$btn-hover-color: rgba($main-color, 0.92);
+$btn-active-color: rgba($main-color, 0.68);
+
+$border-radius: 3px;
+
+%reset-ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Roboto'), local('Roboto-Regular'),
+    url('../fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local('Roboto Medium'), local('Roboto-Medium'),
+    url('../fonts/roboto-v20-latin_cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/roboto-v20-latin_cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 14px/1.4 'Roboto', sans-serif;
+    color: #424242;
+}
+
+a {
+    position: relative;
+    color: $main-color;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: .2s;
+
+    &:hover {
+        background-size: 100% 1px;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1;
+    border: 0;
+    outline: 0;
+    background-color: $main-color;
+    border-radius: $border-radius;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: .2s;
+
+    &:hover {
+        background-color: $btn-hover-color;
+    }
+
+    &:active {
+        background-color: $btn-active-color;
+    }
+
+    &_hollow {
+        color: $accent-color;
+        border: 1px solid $accent-color;
+        background-color: transparent;
+
+        &:hover, &:active {
+            color: #fff;
+            background-color: $accent-color;
+        }
+    }
+}
+
+.container {
+    max-width: 1300px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.page {
+    &__breadcrumbs {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+.row {
+    display: flex;
+}
+
+/*** header ***/
+.header {
+    &__top {
+        height: 40px;
+        background-color: $main-color;
+    }
+
+    &__bottom {
+        height: 40px;
+        background-color: #F7F7F7;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/*** breadcrumbs ***/
+.breadcrumbs {
+    @extend %reset-ul;
+
+    &__item {
+        position: relative;
+        display: inline-block;
+        font-size: 12px;
+        color: #212121;
+
+        & + li {
+            padding-left: 10px;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '/';
+            }
+        }
+    }
+
+    &__link {
+        color: #666666;
+    }
+}

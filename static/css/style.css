@@ -115,6 +115,13 @@ a:hover {
   margin: 0 auto;
 }
 
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-right: 20px;
+}
+
 .page__breadcrumbs {
   margin-top: 30px;
   margin-bottom: 15px;
@@ -151,6 +158,13 @@ a:hover {
   height: 20px;
   margin-top: -10px;
   background: url("/static/img/icon-approval.svg") no-repeat;
+}
+
+.sub-title {
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 28px;
+  border-bottom: 1px solid #E0E0E0;
 }
 
 /*** header ***/
@@ -227,7 +241,8 @@ a:hover {
   cursor: pointer;
 }
 
-.info__bottom {
+/*** company ***/
+.company__bottom {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -236,8 +251,70 @@ a:hover {
           align-items: center;
 }
 
-.info__back {
+.company__back-link {
   margin: 15px 0;
+}
+
+.company__last-ads {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 20px;
+}
+
+.company__about {
+  max-width: 360px;
+}
+
+.company__block {
+  padding: 16px;
+  background: #F0F0F0;
+  border-radius: 3px;
+}
+
+/*** last-ads ***/
+.last-ads__table {
+  width: 100%;
+  font-size: 12px;
+  border-collapse: collapse;
+}
+
+.last-ads__table thead {
+  background: #F0F0F0;
+  border-radius: 3px;
+}
+
+.last-ads__table thead tr {
+  border: 0;
+}
+
+.last-ads__table th {
+  padding: 8px 0;
+  text-align: left;
+  font-weight: 400;
+}
+
+.last-ads__table tr {
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.last-ads__table td {
+  padding: 20px 0;
+}
+
+.fake-btn {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #fff;
+  background-color: #6199C6;
+  border-radius: 3px;
+}
+
+.fake-btn_alert {
+  background-color: #EE6C4D;
 }
 
 .back-link {
@@ -294,5 +371,12 @@ a:hover {
   height: 14px;
   margin-top: -7px;
   background: url("/static/img/icon-comment.svg") left center no-repeat;
+}
+
+/*** advertising ***/
+.advertising {
+  width: 160px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 /*# sourceMappingURL=style.css.map */

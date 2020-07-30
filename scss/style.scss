@@ -105,6 +105,11 @@ a {
     margin: 0 auto;
 }
 
+.main {
+    flex: 1 1 auto;
+    margin-right: 20px;
+}
+
 .page {
     &__breadcrumbs {
         margin-top: 30px;
@@ -140,6 +145,13 @@ a {
             background: url('/static/img/icon-approval.svg') no-repeat;
         }
     }
+}
+
+.sub-title {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 28px;
+    border-bottom: 1px solid #E0E0E0;
 }
 
 /*** header ***/
@@ -214,13 +226,77 @@ a {
     }
 }
 
-.info {
+/*** company ***/
+.company {
     &__bottom {
         justify-content: space-between;
         align-items: center;
     }
-    &__back {
+
+    &__back-link {
         margin: 15px 0;
+    }
+
+    &__last-ads {
+        flex-grow: 1;
+        margin-right: 20px;
+    }
+
+    &__about {
+        max-width: 360px;
+    }
+
+    &__block {
+        padding: 16px;
+        background: #F0F0F0;
+        border-radius: $border-radius;
+    }
+}
+
+/*** last-ads ***/
+.last-ads {
+
+    &__table {
+        width: 100%;
+        font-size: 12px;
+        border-collapse: collapse;
+        & thead {
+            background: #F0F0F0;
+            border-radius: $border-radius;
+
+            tr {
+                border: 0;
+            }
+        }
+
+        & th {
+            padding: 8px 0;
+            text-align: left;
+            font-weight: 400;
+        }
+
+        & tr {
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        & td {
+            padding: 20px 0;
+        }
+    }
+}
+
+.fake-btn {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #fff;
+    background-color: #6199C6;
+    border-radius: $border-radius;
+
+    &_alert {
+        background-color: #EE6C4D;
     }
 }
 
@@ -275,4 +351,10 @@ a {
             background: url('/static/img/icon-comment.svg') left center no-repeat;
         }
     }
+}
+
+/*** advertising ***/
+.advertising {
+    width: 160px;
+    flex-shrink: 0;
 }

@@ -65,6 +65,11 @@ a {
     }
 }
 
+strong, b {
+    font-weight: 500;
+    color: #212121;
+}
+
 .btn {
     display: inline-block;
     padding: 13px 25px;
@@ -101,18 +106,23 @@ a {
 
 .container {
     max-width: 1300px;
-    padding: 0 15px;
+    padding: 0 30px;
     margin: 0 auto;
 }
 
 .main {
     flex: 1 1 auto;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .page {
+
+    &__header {
+        margin-bottom: 30px;
+    }
+
     &__breadcrumbs {
-        margin-top: 30px;
         margin-bottom: 14px;
     }
 
@@ -128,6 +138,8 @@ a {
 
 .row {
     display: flex;
+    margin-left: -10px;
+    margin-right: -10px;
 }
 
 .title {
@@ -138,15 +150,14 @@ a {
     &_approval {
         position: relative;
         padding-left: 32px;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
         &::after {
             position: absolute;
             left: 0;
-            top: 50%;
+            top: 5px;
             content: '';
             width: 20px;
             height: 20px;
-            margin-top: -10px;
             background: url('/static/img/icon-approval.svg') no-repeat;
         }
     }
@@ -187,7 +198,7 @@ a {
         color: #212121;
 
         & + li {
-            padding-left: 9px;
+            padding-left: 8px;
             &::before {
                 position: absolute;
                 top: 0;
@@ -210,6 +221,10 @@ a {
     border-radius: $border-radius;
     box-sizing: border-box;
 
+    &__inner {
+        display: flex;
+    }
+
     &__input {
         width: 100%;
         border-top-left-radius: 3px;
@@ -225,12 +240,20 @@ a {
     }
 
     &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 64px;
         height: 40px;
-        text-indent: -9999;
-        background: $main-color url('/static/img/icon-search.svg') center no-repeat;
+        background-color: $main-color;
         border: 0;
         cursor: pointer;
+    }
+
+    &__icon {
+        width: 18px;
+        height: 18px;
+        fill: #fff;
     }
 }
 
@@ -241,6 +264,7 @@ a {
     }
 
     &__bottom {
+        display: flex;
         justify-content: space-between;
         align-items: center;
     }
@@ -250,7 +274,8 @@ a {
     }
 
     &__left {
-        margin-right: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     &__last-ads {
@@ -259,12 +284,53 @@ a {
 
     &__about {
         max-width: 360px;
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    &__logo {
+        margin-bottom: 13px;
+
+        & img {
+            width: 180px;
+            height: auto;
+        }
     }
 
     &__block {
         padding: 16px;
         background: #F0F0F0;
         border-radius: $border-radius;
+    }
+
+    &__text-item {
+        margin-bottom: 9px;
+    }
+
+    &__text-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        & li {
+            position: relative;
+            padding-left: 13px;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '–';
+            }
+        }
+    }
+
+    &__gallery {
+        & img {
+            height: 120px;
+            width: auto;
+        }
     }
 }
 
@@ -285,8 +351,7 @@ a {
         }
 
         & th {
-            padding: 8px 0;
-            text-align: left;
+            padding: 8px 7px;
             font-weight: 400;
         }
 
@@ -295,8 +360,18 @@ a {
         }
 
         & td {
-            padding: 20px 0;
+            padding: 8px 7px;
         }
+    }
+
+    &__title,
+    &__who {
+        text-align: left;
+    }
+
+    &__status {
+        min-width: 71px;
+        text-align: center;
     }
 
     &__author {
@@ -319,6 +394,25 @@ a {
         text-overflow: ellipsis;
         overflow: hidden;
         color: #999999;
+    }
+
+    &__view-icon {
+        width: 14px;
+        height: 8px;
+        fill: #424242;
+    }
+
+    &__view-head {
+        text-align: right;
+    }
+
+    &__view-count {
+        text-align: right;
+    }
+
+    &__time,
+    &__view {
+        text-align: right;
     }
 }
 
@@ -354,39 +448,35 @@ a {
 
 /*** meta ***/
 .meta {
-    color: #999999;
-    &__icon {
-        position: relative;
-        padding-left: 26px;
-        line-height: 1;
-
-        &::before {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            content: '';
-        }
-    }
-    &__icon_view {
-        margin-right: 32px;
-
-        &::before {
-            width: 17px;
-            height: 10px;
-            margin-top: -5px;
-            background: url('/static/img/icon-view.svg') left center no-repeat;
-        }
-    }
-
-    &__icon_feedback {
+    display: flex;
+    &__text {
         color: #999999;
-        
-        &::before {
-            width: 15px;
-            height: 14px;
-            margin-top: -7px;
-            background: url('/static/img/icon-comment.svg') left center no-repeat;
-        }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        margin-right: 33px;
+    }
+
+    &__icon-view,
+    &__icon-comment {
+        fill: #999;
+    }
+
+    &__icon-view {
+        width: 17px;
+        height: 10px;
+    }
+
+    &__icon-comment {
+        width: 15px;
+        height: 13px;
+        stroke: #999999;
+    }
+
+    &__text {
+        padding-left: 8px;
     }
 }
 
@@ -394,4 +484,64 @@ a {
 .advertising {
     width: 160px;
     flex-shrink: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.footer {
+    margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+
+    .row {
+        flex-direction: column;
+    }
+
+    .company {
+        &__logo {
+            & img {
+                width: 120px;
+            }
+        }
+
+        &__about {
+            max-width: 100%;
+        }
+    }
+
+    .last-ads {
+        overflow-x: scroll;
+        &__table {
+            min-width: 560px;
+        }
+    }
+
+    .advertising {
+        width: auto;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .company {
+        &__bottom {
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+
+        &__meta,
+        &__btn {
+            margin: 10px 0;
+        }
+    }
 }

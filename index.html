@@ -9,7 +9,7 @@
 <body class="page">
 
     <!-- begin .header -->
-    <header class="header">
+    <header class="header page__header">
         <div class="header__top"></div>
         <div class="header__bottom"></div>
     </header>
@@ -34,11 +34,15 @@
             
                 <div class="page__search">
                     <!-- begin .search -->
-                    <div class="search ">
+                    <div class="search">
                         <form action="/" method="post">
-                            <div class="search__inner row">
+                            <div class="search__inner">
                                 <input class="search__input" type="text" name="search" placeholder="Поиск по компаниям">
-                                <button class="search__btn" type="submit" name="submit">&nbsp;</button>
+                                <button class="search__btn" type="submit" name="submit">
+                                    <svg class="search__icon">
+                                        <use xlink:href="/static/img/sprite.svg#search"></use>
+                                    </svg>
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -50,12 +54,22 @@
                     <div class="company__info">
                         <a href="#" class="back-link company__back-link">К каталогу компаний</a>
                         <h1 class="title title_approval">Преображенский МПК, ООО</h1>
-                        <div class="company__bottom row">
-                            <div class="meta">
-                                <span class="meta__icon meta__icon_view">578(2)</span>
-                                <a href="#" class="meta__icon meta__icon_feedback">Оставить отзыв</a>
+                        <div class="company__bottom">
+                            <div class="meta company__meta">
+                                <div class="meta__icon">
+                                    <svg class="meta__icon-view">
+                                        <use xlink:href="/static/img/sprite.svg#view"></use>
+                                    </svg>
+                                    <span class="meta__text">578 (2)</span>
+                                </div>
+                                <div class="meta__icon">
+                                    <svg class="meta__icon-comment">
+                                        <use xlink:href="/static/img/sprite.svg#comment"></use>
+                                    </svg>
+                                    <a href="#" class="meta__text">Оставить отзыв</a>
+                                </div>
                             </div>
-                            <button class="btn btn_hollow">Работаете в этой компании?</button>
+                            <button class="btn btn_hollow company__btn">Работаете в этой компании?</button>
                         </div>
                     </div>
                     <!-- end info -->
@@ -70,17 +84,21 @@
                                     <thead>
                                         <tr>
                                             <th></th>
-                                            <th>Объявление</th>
-                                            <th>Время</th>
-                                            <th>иконка</th>
-                                            <th>Опубликовал</th>
+                                            <th class="last-ads__title">Объявление</th>
+                                            <th class="last-ads__time">Время</th>
+                                            <th class="last-ads__view">
+                                                <svg class="last-ads__view-icon">
+                                                    <use xlink:href="/static/img/sprite.svg#view"></use>
+                                                </svg>
+                                            </th>
+                                            <th class="last-ads__who">Опубликовал</th>
                                         </tr>
                                     </thead>
                                     <tr>
-                                        <td><span class="fake-btn">Продам</span></td>
+                                        <td class="last-ads__status"><span class="fake-btn">Продам</span></td>
                                         <td><a href="#">Желудки куриные очищенные 60 руб.</a></td>
                                         <td>5 фев</td>
-                                        <td>155</td>
+                                        <td class="last-ads__view-count">155</td>
                                         <td class="last-ads__author">
                                             <img src="/static/img/no-photo.png" alt="no-photo">
                                             <div class="last-ads__author-about">
@@ -90,10 +108,10 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><span class="fake-btn">Продам</span></td>
+                                        <td class="last-ads__status"><span class="fake-btn">Продам</span></td>
                                         <td><a href="#">ГоленьЦБ(подл) 100р, Желудки кур.очиш 60 р</a></td>
-                                        <td>5 фев</td>
-                                        <td>155</td>
+                                        <td>27 фев</td>
+                                        <td class="last-ads__view-count">42069</td>
                                         <td class="last-ads__author">
                                             <img src="/static/img/no-photo.png" alt="no-photo">
                                             <div class="last-ads__author-about">
@@ -103,10 +121,10 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><span class="fake-btn fake-btn_alert">Продам</span></td>
+                                        <td class="last-ads__status"><span class="fake-btn fake-btn_alert">Продам</span></td>
                                         <td><a href="#">Желудки куриные очищенные 60 руб.</a></td>
                                         <td>5 фев</td>
-                                        <td>155</td>
+                                        <td class="last-ads__view-count">155</td>
                                         <td class="last-ads__author">
                                             <img src="/static/img/no-photo.png" alt="no-photo">
                                             <div class="last-ads__author-about">
@@ -116,10 +134,10 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><span class="fake-btn fake-btn_alert">Продам</span></td>
+                                        <td class="last-ads__status"><span class="fake-btn fake-btn_alert">Продам</span></td>
                                         <td><a href="#">Желудки куриные очищенные 60 руб.</a></td>
                                         <td>5 фев</td>
-                                        <td>155</td>
+                                        <td class="last-ads__view-count">155</td>
                                         <td class="last-ads__author">
                                             <img src="/static/img/author-photo.png" alt="photo">
                                             <div class="last-ads__author-about">
@@ -129,10 +147,10 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><span class="fake-btn">Продам</span></td>
+                                        <td class="last-ads__status"><span class="fake-btn">Продам</span></td>
                                         <td><a href="#">Желудки куриные очищенные 60 руб.</a></td>
                                         <td>5 фев</td>
-                                        <td>155</td>
+                                        <td class="last-ads__view-count">155</td>
                                         <td class="last-ads__author">
                                             <img src="/static/img/no-photo.png" alt="no-photo">
                                             <div class="last-ads__author-about">
@@ -142,10 +160,10 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><span class="fake-btn">Продам</span></td>
+                                        <td class="last-ads__status"><span class="fake-btn">Продам</span></td>
                                         <td><a href="#">Желудки куриные очищенные 60 руб.</a></td>
                                         <td>5 фев</td>
-                                        <td>155</td>
+                                        <td class="last-ads__view-count">155</td>
                                         <td class="last-ads__author">
                                             <img src="/static/img/no-photo.png" alt="no-photo">
                                             <div class="last-ads__author-about">
@@ -155,10 +173,10 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><span class="fake-btn">Продам</span></td>
+                                        <td class="last-ads__status"><span class="fake-btn">Продам</span></td>
                                         <td><a href="#">Желудки куриные очищенные 60 руб.</a></td>
                                         <td>5 фев</td>
-                                        <td>155</td>
+                                        <td class="last-ads__view-count">155</td>
                                         <td class="last-ads__author">
                                             <img src="/static/img/no-photo.png" alt="no-photo">
                                             <div class="last-ads__author-about">
@@ -174,16 +192,39 @@
                         <div class="company__section">                   
                             <h2 class="sub-title">Фото продукции</h2>
                             <div class="company__gallery">
-                                <img src="/static/img/meat/img1.jpg" alt="img1">
-                                <img src="/static/img/meat/img2.jpg" alt="img2">
-                                <img src="/static/img/meat/img1.jpg" alt="img1">
-                                <img src="/static/img/meat/img3.jpg" alt="img3">
-                                <img src="/static/img/meat/img4.jpg" alt="img4">
-                                <img src="/static/img/meat/img2.jpg" alt="img2">
-                                <img src="/static/img/meat/img2.jpg" alt="img2">
-                                <img src="/static/img/meat/img1.jpg" alt="img1">
-                                <img src="/static/img/meat/img3.jpg" alt="img3">
-                                <img src="/static/img/meat/img4.jpg" alt="img4">
+                                <div id="aniimated-thumbnials">
+                                    <a target="_blank" href="https://pbs.twimg.com/media/EJ0eBsUWsAALwuY.jpg">
+                                        <img src="/static/img/meat/img1.jpg" alt="img1">
+                                    </a>
+                                    <a target="_blank" href="https://pbs.twimg.com/media/EJ0eBsUWsAALwuY.jpg">
+                                        <img src="/static/img/meat/img2.jpg" alt="img2">
+                                    </a>
+                                    <a target="_blank" href="https://pbs.twimg.com/media/EJ0eBsUWsAALwuY.jpg">
+                                        <img src="/static/img/meat/img1.jpg" alt="img1">
+                                    </a>
+                                    <a target="_blank" href="https://pbs.twimg.com/media/EJ0eBsUWsAALwuY.jpg">
+                                        <img src="/static/img/meat/img3.jpg" alt="img3">
+                                    </a>
+                                    <a target="_blank" href="https://pbs.twimg.com/media/EJ0eBsUWsAALwuY.jpg">
+                                        <img src="/static/img/meat/img4.jpg" alt="img4">
+                                    </a>
+                                    <a target="_blank" href="https://pbs.twimg.com/media/EJ0eBsUWsAALwuY.jpg">
+                                        <img src="/static/img/meat/img2.jpg" alt="img2">
+                                    </a>
+                                    <a target="_blank" href="https://pbs.twimg.com/media/EJ0eBsUWsAALwuY.jpg">
+                                        <img src="/static/img/meat/img2.jpg" alt="img2">
+                                    </a>
+                                    <a target="_blank" href="https://pbs.twimg.com/media/EJ0eBsUWsAALwuY.jpg">
+                                        <img src="/static/img/meat/img1.jpg" alt="img1">
+                                    </a>
+                                    <a target="_blank" href="https://pbs.twimg.com/media/EJ0eBsUWsAALwuY.jpg">
+                                        <img src="/static/img/meat/img3.jpg" alt="img3">
+                                    </a>
+                                    <a href="https://pbs.twimg.com/media/EJ0eBsUWsAALwuY.jpg">
+                                        <img src="/static/img/meat/img4.jpg" alt="img4">
+                                    </a>
+                                  </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -220,7 +261,7 @@
                             </div>
                             <div class="company__text-item">
                                 <strong>Виды деятольности:</strong>
-                                <ul>
+                                <ul class="company__text-list">
                                     <li>Оборудование, упаковка</li>
                                     <li>Оптовая торговля</li>
                                     <li>Производитель готовой продукции</li>
@@ -230,7 +271,7 @@
                             </div>
                             <div class="company__text-item">
                                 <strong>Виды продукции:</strong>
-                                <ul>
+                                <ul class="company__text-list">
                                     <li>Свинина</li>
                                     <li>Замороженное и охлажденное мясо</li>
                                     <li>Мясные полуфабрикаты</li>
@@ -255,6 +296,10 @@
             </aside>
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="container">footer</div>
+    </footer>
  
 <script src="/static/js/main.js"></script>
 </body>

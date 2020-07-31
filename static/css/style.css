@@ -124,12 +124,16 @@ a:hover {
 
 .page__breadcrumbs {
   margin-top: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
 .page__search {
-  margin-top: 15px;
+  margin-top: 14px;
   margin-bottom: 30px;
+}
+
+.page__info-block {
+  margin-bottom: 15px;
 }
 
 .row {
@@ -146,7 +150,8 @@ a:hover {
 
 .title_approval {
   position: relative;
-  padding-left: 30px;
+  padding-left: 32px;
+  margin-bottom: 6px;
 }
 
 .title_approval::after {
@@ -161,6 +166,7 @@ a:hover {
 }
 
 .sub-title {
+  padding-bottom: 7px;
   font-weight: 500;
   font-size: 19px;
   line-height: 28px;
@@ -169,12 +175,12 @@ a:hover {
 
 /*** header ***/
 .header__top {
-  height: 40px;
+  height: 44px;
   background-color: #005FAE;
 }
 
 .header__bottom {
-  height: 40px;
+  height: 44px;
   background-color: #F7F7F7;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
@@ -195,7 +201,7 @@ a:hover {
 }
 
 .breadcrumbs__item + li {
-  padding-left: 10px;
+  padding-left: 9px;
 }
 
 .breadcrumbs__item + li::before {
@@ -221,6 +227,8 @@ a:hover {
 
 .search__input {
   width: 100%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
   padding-left: 12px;
   padding-top: 11px;
   padding-bottom: 11px;
@@ -242,6 +250,10 @@ a:hover {
 }
 
 /*** company ***/
+.company__section {
+  margin-bottom: 30px;
+}
+
 .company__bottom {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -255,11 +267,14 @@ a:hover {
   margin: 15px 0;
 }
 
+.company__left {
+  margin-right: 20px;
+}
+
 .company__last-ads {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  margin-right: 20px;
 }
 
 .company__about {
@@ -302,6 +317,32 @@ a:hover {
   padding: 20px 0;
 }
 
+.last-ads__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.last-ads__author-about {
+  margin-left: 5px;
+}
+
+.last-ads__author-name, .last-ads__author-from {
+  display: block;
+}
+
+.last-ads__author-from {
+  max-width: 172px;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  color: #999999;
+}
+
 .fake-btn {
   display: inline-block;
   padding: 4px 10px;
@@ -340,7 +381,7 @@ a:hover {
 
 .meta__icon {
   position: relative;
-  padding-left: 20px;
+  padding-left: 26px;
   line-height: 1;
 }
 
@@ -352,7 +393,7 @@ a:hover {
 }
 
 .meta__icon_view {
-  margin-right: 24px;
+  margin-right: 32px;
 }
 
 .meta__icon_view::before {
